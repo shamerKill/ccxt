@@ -247,7 +247,7 @@ export default class Client {
                     future.resolve(null);
                 }
             }
-            this.connection.send(message, {}, onSendComplete);
+            this.connection.send(message, this.options || {}, onSendComplete);
         }
         else {
             this.connection.send(message);
